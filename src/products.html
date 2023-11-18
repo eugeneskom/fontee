@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Продукты",
+"description":"Продукты"
+})
+
+<body class="dark-mode">
+ <header class="header">
+  <div class="container container--big">
+   <nav class="nav" role="navigation">
+    <button class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-haspopup="true"
+     aria-controls="menu">
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="sr-only">Menu</span>
+    </button>
+
+    <a href="./" class="nav__logo logo">
+     <img src="img/icons/logo.svg" alt="Logo of the website" class="logo__img">
+    </a>
+
+    <div class="nav__popup" id="menu">
+     <ul class="nav__list">
+      <li class="nav__item">
+       <a href="index.html#about" class="nav__link">О нас</a>
+      </li>
+      <li class="nav__item">
+       <a href="index.html#team" class="nav__link">Команда</a>
+      </li>
+      <li class="nav__item">
+       <a href="index.html#blog" class="nav__link">Блог</a>
+      </li>
+      <li class="nav__item">
+       <a href="products.html" class="nav__link active">Продукты</a>
+      </li>
+      <li class="nav__item">
+       <a href="contacts.html" class="nav__link">Контакты</a>
+      </li>
+      <li class="nav__item nav__item--custom">
+       <select name="" id="" class="lang">
+        <option class="lang__rus" value="rus">Русский</option>
+        <option class="lang__kz" value="kz">Kазахский</option>
+       </select>
+       <a href="#" class="nav__link nav__link--border btn">Войти</a>
+      </li>
+     </ul>
+
+
+    </div>
+
+
+
+
+   </nav>
+  </div>
+
+ </header>
+
+ <main class="main">
+  <!-- @@include('components/page-blocks/_4.intro.html',{
+  'src': "img/products/intro-4.webp"
+  }) -->
+
+  <section class="section products">
+   <div class="container container--products">
+    <h1 class="title title--after products__title">Продукты</h1>
+    <ul class="products__list">
+     <li class="products__item product">
+      <div class="product__content">
+       <h2 class="product__title">Хедж-фонд</h2>
+       <p class="product__text">
+        Классический выбор профессиональных инвесторов с заданными умеренными параметрами риска. Основан на
+        инвестировании в бумаги индекса S&P 500 с диверсификацией по 11 секторам экономики.
+       </p>
+       <a href="product-single.html" class="btn btn--product product__btn">Подробнее</a>
+      </div>
+      <div class="product__box">
+       <img src="img/products/1.webp" alt="Хедж-фонд" class="product__img">
+      </div>
+     </li>
+
+     <li class="products__item product">
+      <div class="product__content">
+       <h2 class="product__title">Крипто фонд<span class="accent"> *</span></h2>
+       <p class="product__text">
+        Предоставляет клиентам легальные возможности для инвестирования
+        в криптовалюту и связанные с ней продукты.
+       </p>
+       <a href="product-single.html" class="btn btn--product product__btn">Подробнее</a>
+      </div>
+      <div class="product__box">
+       <img src="img/products/2.webp" alt="Хедж-фонд" class="product__img">
+      </div>
+     </li>
+
+     <li class="products__item product">
+      <div class="product__content">
+       <h2 class="product__title">Венчурный фонд<span class="accent"> *</span></h2>
+       <p class="product__text">
+        Инвестиции в компании и проекты (стартапы), в том числе в компании
+        на этапе Pre-IPO. Подходит для инвесторов, желающих получить более высокий доход при повышенной степени риска
+       </p>
+       <a href="product-single.html" class="btn btn--product product__btn">Подробнее</a>
+      </div>
+      <div class="product__box">
+       <img src="img/products/3.webp" alt="Хедж-фонд" class="product__img">
+      </div>
+     </li>
+
+     <li class="products__item product">
+      <div class="product__content">
+       <h2 class="product__title">Сукук фонд <span class="accent"> *</span></h2>
+       <p class="product__text">
+        Предлагает возможность осуществлять долгосрочные инвестиции
+        в инструменты с
+        фиксированной доходностью, соответствующие принципам Шариата
+       </p>
+       <a href="product-single.html" class="btn btn--product product__btn">Подробнее</a>
+      </div>
+      <div class="product__box">
+       <img src="img/products/4.webp" alt="Хедж-фонд" class="product__img">
+      </div>
+     </li>
+
+     <li class="products__item product">
+      <div class="product__content">
+       <h2 class="product__title">Кастом/Private</h2>
+       <p class="product__text">
+        Можем учесть ваши пожелания <br/>
+        по параметрам фонда
+       </p>
+       <a href="product-single.html" class="btn btn--product product__btn">Подробнее</a>
+      </div>
+      <div class="product__box">
+       <img src="img/products/5.webp" alt="Хедж-фонд" class="product__img">
+      </div>
+     </li>
+    </ul>
+
+    <p class="products__note">
+     <span class="accent">*</span> в процессе регистрации 
+    </p>
+
+  @@include('components/chunks/_1.pagination.html')
+
+   </div>
+  </section>
+
+
+  <!-- @@include('components/page-blocks/_2.subscribe.html') -->
+  @@include('components/page-blocks/_3.middle-nav.html')
+ </main>
+
+
+
+ @@include('components/page-blocks/_footer.html')
+ @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

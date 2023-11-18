@@ -1,0 +1,193 @@
+.hero {
+ padding: 50px 0 35px;
+ position: relative;
+ box-shadow: 0 0 72px rgba(255, 102, 0 , 0.24);
+
+ @include rmin($r-md) {
+  padding: 60px 0 90px;
+ }
+
+ &__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+ }
+
+ &__swiper {
+  padding-left: 5rem;
+
+  @include rmin($r-lg) {
+   margin-left: 70px;
+  }
+ }
+
+ &__slide {
+  @include rmin($r-md) {
+   display: flex;
+   justify-content: space-between;
+  }
+ }
+
+ &__title,
+ &__description {
+  color: $t_main;
+  margin-bottom: 3rem;
+ }
+
+ &__title {
+  font-family: $mon-bold;
+  line-height: 1.38;
+ }
+
+ &__description {
+  font-family: $mon-medium;
+  @include font-size(1.4, 2);
+  line-height: 1.36;
+ }
+
+ &__link {
+  display: inline-block;
+  margin-bottom: 3rem;
+  color: $accent;
+ }
+
+ &__swiper-content {
+  max-width: 500px;
+  margin-top: 60px;
+
+  @include rmin($r-lg) {
+   margin-top: 90px;
+  }
+ }
+
+ &__swiper-btns {
+  display: flex;
+  margin-bottom: 3rem;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+
+  @include rmin($r-md) {
+   top: 40px;
+
+  }
+ }
+
+ &__swiper-btn {
+  width: 2.4rem;
+  height: 2.4rem;
+
+  &:not(:last-child) {
+   margin-right: 15px;
+  }
+ }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+ cursor: pointer;
+
+ svg {
+  fill: none;
+  stroke: $accent;
+  stroke-opacity: 0.5;
+  stroke-width: 2;
+  stroke-linecap: square;
+  stroke-linejoin: round;
+ }
+}
+
+.swiper-button-disabled {
+ cursor: auto;
+
+ svg {
+  stroke: white;
+ }
+}
+
+.swiper-pagination {
+ height: 20px;
+ display: flex;
+}
+
+.swiper-pagination-bullet {
+ width: 12px;
+ height: 12px;
+ display: block;
+ border-radius: 50%;
+ background-color: rgba(255, 255, 255, 0.3);
+
+ &:not(:last-child) {
+  margin-right: 18px;
+ }
+}
+
+.swiper-pagination-bullet-active {
+ background-color: $accent;
+ box-shadow: 0px 0px 20px rgba(255, 102, 0, 0.85);
+}
+
+.posts {
+
+ &__item {
+  max-width: 300px;
+  width: 100%;
+  overflow: hidden;
+
+  &:not(:last-child) {
+   margin-bottom: 30px;
+
+   @include rmin($r-md) {
+    margin-bottom: 35px;
+   }
+  }
+ }
+
+ &__box {
+  max-width: 300px;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 10px;
+ }
+
+ &__img {
+  object-fit: cover;
+ }
+
+ &__title {
+  color: $t_main;
+  font-family: $gogh-bold;
+  font-size: 1.4rem;
+  line-height: 1.36;
+ }
+
+ &__bottom {
+  display: flex;
+  justify-content: space-between;
+ }
+
+ &__link {
+  color: $accent;
+  font-family: $gilroy-semi;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+
+  &::after {
+   content: "";
+   background-image: url('../img/icons/chevrone.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 4.5px;
+   height: 8px;
+   transform: translateX(9px);
+  }
+ }
+}

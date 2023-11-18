@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Продукты",
+"description":"Продукты"
+})
+
+<body class="dark-mode">
+ <header class="header">
+  <div class="container container--big">
+   <nav class="nav" role="navigation">
+    <button class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-haspopup="true"
+     aria-controls="menu">
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="sr-only">Menu</span>
+    </button>
+
+    <a href="./" class="nav__logo logo">
+     <img src="img/icons/logo.svg" alt="Logo of the website" class="logo__img">
+    </a>
+
+    <div class="nav__popup" id="menu">
+     <ul class="nav__list">
+      <li class="nav__item">
+       <a href="index.html#about" class="nav__link">О нас</a>
+      </li>
+      <li class="nav__item">
+       <a href="index.html#team" class="nav__link">Команда</a>
+      </li>
+      <li class="nav__item">
+       <a href="index.html#blog" class="nav__link">Блог</a>
+      </li>
+      <li class="nav__item">
+       <a href="products.html" class="nav__link active">Продукты</a>
+      </li>
+      <li class="nav__item">
+       <a href="contacts.html" class="nav__link">Контакты</a>
+      </li>
+      <li class="nav__item nav__item--custom">
+       <select name="" id="" class="lang">
+        <option class="lang__rus" value="rus">Русский</option>
+        <option class="lang__kz" value="kz">Kазахский</option>
+       </select>
+       <a href="#" class="nav__link nav__link--border btn">Войти</a>
+      </li>
+     </ul>
+
+
+    </div>
+
+
+
+
+   </nav>
+  </div>
+
+ </header>
+
+ <main class="main">
+  <!-- @@include('components/page-blocks/_4.intro.html',{
+  'src': "img/products/intro-4.webp"
+  }) -->
+
+  <section class="section products">
+   <div class="container container--products">
+    <ul class="breadcrumbs">
+     <li class="breadcrumbs__item"><a href="blog.html" class="blog-section__breadcrumbs breadcrumbs__link">Продукты</a>
+     </li>
+     <li class="breadcrumbs__item"><span class="breadcrumbs__link">Хедж-фонд</span></li>
+    </ul>
+    <h1 class="title title--after products__title">Хедж-фонд</h1>
+    <div class="products-single">
+     <div class="products-single__box">
+      <img src="img/products/1.webp" alt="" class="products-single__img">
+     </div>
+     <div class="products-single__content">
+      <p>Инвестиции, нацеленные на долгосрочный прирост капитала путем инвестирования в ценные бумаги международных
+       эмитентов с высоким потенциалом роста. Инвестиции, нацеленные на долгосрочный прирост капитала путем
+       инвестирования в ценные бумаги международных эмитентов с высоким потенциалом роста. Инвестиции, нацеленные на
+       долгосрочный прирост капитала путем инвестирования в ценные бумаги международных эмитентов с высоким потенциалом
+       роста. </p>
+      <p>
+       Индивидуальные инвестиционные счета (ИИС) третьего типа придут на смену ИИС первого типа. Новый формат ИИС
+       попадет в систему единого налогового вычета на все инвестиционные продукты, в том числе договоры с пенсионными
+       фондами и полисы страхования. Об этом пишут «Ведомости» со ссылкой на разработанную Минфином концепцию развития
+       такой системы.
+
+      </p>
+      <p>
+       Два первых типа ИИС появились в 2015 году. По данным Московской биржи на конец июля, они были открыты у 5,6 млн
+       человек. ИИС-I позволяет его владельцу получать 13% от зачисленной на счет за год суммы, но не более 400 000
+       рублей (максимум вычета — 52 000 рублей в год). По ИИС-II весь доход по операциям освобождается от уплаты налога
+       при закрытии счета. Для получения льгот по обеим форматам счетов нужно держать ИИС три года и не выводить
+       средства. Можно иметь только один ИИС и в год внести на него не более 1 млн рублей.
+      </p>
+     </div>
+
+     <div class="products-single__docs">
+      <h2 class="products-single__heading">Документы</h2>
+      <ul class="products-single__list download-block">
+       <li class="products-single__item download-block__item">
+        <img class="download-block__icon" src="img/icons/docs.svg" alt="">
+        <div class="flex-column">
+         <span class="form-file__title">Документ 1</span>
+         <span class="form-file__text">Размер 5мб</span>
+        </div>
+        <a class="download-block__link"
+         href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/11907/His%20Girl%20Friday%20%7C%20Public%20Domain%20Movies.webloc"
+         download>
+         <img src="img/icons/arrow-download.svg" alt="">
+        </a>
+       </li>
+       <li class="products-single__item download-block__item">
+        <img class="download-block__icon" src="img/icons/docs.svg" alt="">
+        <div class="flex-column">
+         <span class="form-file__title">Документ 1</span>
+         <span class="form-file__text">Размер 5мб</span>
+        </div>
+        <a class="download-block__link"
+         href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/11907/His%20Girl%20Friday%20%7C%20Public%20Domain%20Movies.webloc"
+         download>
+         <img src="img/icons/arrow-download.svg" alt="">
+        </a>
+       </li>
+      </ul>
+     </div>
+
+     <div class="products-license">
+      <h2 class="products-license__title">Лицензии</h2>
+      <ul class="products-license__list">
+       <li class="products-license__item">
+        <a href="" class="products-license__link">
+         <img src="img/licenses/license-1.webp" alt="Сертификат" class="products-license__img">
+        </a>
+        <h3 class="products-license__subtitle">Сертификат</h3>
+       </li>
+       <li class="products-license__item">
+        <a href="" class="products-license__link">
+         <img src="img/licenses/license-2.webp" alt="Лицензия" class="products-license__img">
+        </a>
+        <h3 class="products-license__subtitle">Лицензия</h3>
+       </li>
+      </ul>
+     </div>
+
+    </div>
+
+
+
+
+   </div>
+  </section>
+
+
+  @@include('components/page-blocks/_2.subscribe.html')
+  @@include('components/page-blocks/_3.middle-nav.html')
+ </main>
+
+
+
+ @@include('components/page-blocks/_footer.html')
+ @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

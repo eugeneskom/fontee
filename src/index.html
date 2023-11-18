@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Fonte",
+"description":"Fonte",
+"keywords":"",
+})
+
+<body class="dark-mode">
+ <main class="main">
+  @@include('components/page-blocks/_0.header.html')
+  @@include('components/page-blocks/_1.hero.html')
+ @@include('components/page-blocks/_5.about-block.html',{
+  "section--modif": "about-block--dark"
+ })
+ @@include('components/page-blocks/_7.values.html',{
+  'modif': "values--line"
+ })
+ @@include('components/page-blocks/_8.our-team.html',{
+  "section--modif": "our-team--line"
+ })
+ @@include('components/page-blocks/_11.blog-home.html',{
+  "modif": "blog-home--line"
+ })
+
+
+  @@include('components/page-blocks/_2.subscribe.html')
+  @@include('components/page-blocks/_3.middle-nav.html')
+
+
+
+
+
+
+  <!-- @@include('components/radio-buttons/_checkbox.html') -->
+  <!-- @@include('components/radio-buttons/_select.html') -->
+  <!-- @@include('components/page-blocks/_swiper.html') -->
+  <!-- @@loop('components/chunks/_card.html', 'data/card.json') -->
+  <div class="container">
+  <!-- @@include('components/page-blocks/_nav.html') -->
+  </div>
+ </main>
+ @@include('components/page-blocks/_footer.html')
+ @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

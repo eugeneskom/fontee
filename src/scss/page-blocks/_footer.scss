@@ -1,0 +1,66 @@
+.footer{
+ padding: 3rem 0 6rem;
+ color:rgba(#FFFFFF, 0.6);
+
+ &__top{
+  margin-bottom: 3rem;
+  @include rmin($r-md){
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+  }
+ }
+
+ &__copy{
+  display: block;
+  @include r($r-md){
+   margin-bottom: 2rem;
+  }
+ }
+
+
+ &__content{
+  @include mon-regular;
+  font-size: 1.2rem;
+  width: 100%;
+  p{
+   &:not(:last-child){
+    margin-bottom: 2rem;
+   }
+  }
+ }
+
+}
+
+
+
+.social{
+
+display: flex;
+
+&__item{
+ &:not(:last-child){
+  margin-right: 10px;
+ }
+}
+
+ &__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #000;
+  transition: all 0.3s ease-in;
+
+  &:hover{
+   background-color: $accent;
+  }
+ }
+
+ &__svg{
+  max-width: 2rem;
+  max-height: 2rem;
+ }
+}

@@ -1,0 +1,89 @@
+.contacts{
+
+ &__inner{
+  margin-bottom: 5rem;
+  @include rmin($r-lg){
+   display: flex;
+   margin-bottom: 12rem;
+  }
+ }
+ &__title{
+  margin-bottom: 3rem;
+  @include rmin($r-md){
+   margin-bottom: 5rem;
+  }
+ }
+
+ &__info{
+  font-style: normal;
+  font-size: 2rem;
+  max-width: 65rem;
+  width: 100%;
+  @include r($r-lg){
+   margin-bottom: 5rem;
+  }
+ }
+ &__bold{
+  @include mon-bold;
+ }
+ &__email{
+  margin-bottom: 4rem;
+ }
+ &__reg{
+  @include mon-regular;
+
+ }
+ &__tel,
+ &__street{
+  display: inline-block;
+ }
+ &__tel{
+  margin-bottom: 4rem;
+ }
+ &__street{
+  margin-bottom: 3rem;
+ }
+ &__link{
+  display: block;
+ }
+ &__form.subscribe__form{
+  max-width: 40rem;
+  width: 100%;
+  margin: 0;
+ }
+ &__submit{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+ }
+
+ &__maps{
+  @include rmin($r-xl){
+   display: flex;
+  }
+ }
+ &__maps-one{
+  @include rmin($r-xl){
+   margin-right: 5rem;
+  }
+  @include r($r-xl){
+   margin-bottom: 5rem;
+  }
+ }
+ &__map{
+  max-width: 54.6rem;
+  max-height: 30rem;
+  width: 100%;
+  height: 100%;
+  a{
+   width: 100%;
+   height: 100%;
+   opacity: 0.2;
+   transition: opacity 0.3s ease-in-out;
+   &:hover{
+    opacity: 1;
+   }
+  }
+ }
+
+}

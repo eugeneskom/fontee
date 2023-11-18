@@ -1,0 +1,134 @@
+.our-team {
+&--line{
+ background-image: url('../img/icons/line-2.svg');
+ background-repeat: no-repeat;
+ background-position: top right ;
+ background-size: 62% auto;
+ padding-top: 15rem;
+}
+
+ &__title {
+  margin-bottom: 5rem;
+ }
+
+ &__description {
+  font-family: $mon-medium;
+  font-weight: 500;
+  margin-bottom: 5rem;
+  max-width: 68rem;
+  width: 100%;
+  font-size: 2rem;
+ }
+
+ &__heading {
+  margin-bottom: 5rem;
+  font-weight: 500;
+
+  @include rmin($r-md) {
+   margin-bottom: 10rem;
+  }
+
+ }
+
+ &__list {
+  margin-bottom: 5rem;
+
+  @include rmin($r-md) {
+   margin-bottom: 14rem;
+  }
+ }
+}
+
+.team-list {
+ @include rmin(400) {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+ }
+
+
+ &__item {
+  text-align: center;
+
+  @include rmin(400) {
+   width: calc((100% - 2rem) / 2);
+  }
+
+  @include rmin($r-sm) {
+   width: calc((100% - 5rem) / 3);
+  }
+
+  @include rmin($r-xl) {
+   width: calc((100% - 15rem) / 6);
+  }
+
+  &:not(:last-child) {
+   @include r($r-sm) {
+    margin-bottom: 5rem;
+   }
+  }
+
+ }
+
+ &__box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+ }
+
+ &__img {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+ }
+
+ &__heading,
+ &__subheading {
+  font-size: 1.8rem;
+  line-height: 1.39;
+ }
+
+ &__heading {
+  margin-bottom: 0.5rem;
+  @include mon-bold;
+ }
+
+ &__subheading {
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  @include mon-medium;
+
+ }
+
+}
+
+.our-partners {
+ &__title {
+  margin-bottom: 60px;
+ }
+
+ &__list {
+  @include rmin($r-md) {
+   display: flex;
+   align-items: center;
+  }
+ }
+
+ &__item {
+  @include r($r-md) {
+   margin-bottom: 30px;
+  }
+
+  &:not(:last-child) {
+   @include rmin($r-md) {
+    margin-right: 50px;
+   }
+  }
+ }
+
+ &__link {
+  @include mon-medium;
+  font-size: 2.8rem;
+ }
+}

@@ -1,0 +1,28 @@
+.license {
+ background-color: #F3F3F3;
+
+ &__inner {
+  padding: 6rem 0 13.5rem;
+  background-image: url('../img/icons/license.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 2rem right;
+  background-size: auto 110px;
+
+  @include rmin($r-md) {
+   padding: 6rem 0;
+   background-size: auto 170px;
+   background-position: center right;
+  }
+ }
+
+ &__heading {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  font-weight: 500;
+ }
+
+ &__text {
+  max-width: 55rem;
+ }
+}

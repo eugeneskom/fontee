@@ -1,0 +1,52 @@
+.about-block{
+ scroll-margin-top: 10rem;
+
+ &--light{
+  background-color: $t_main;
+ }
+
+ @include rmin($r-lg){
+  padding-bottom: 5rem;
+ }
+ &__content{
+  width: 100%;
+ }
+ &__title{
+  margin-bottom: 3rem;
+  @include rmin($r-md){
+   margin-bottom: 6rem;
+  }
+ }
+
+ &__inner{
+  @include rmin($r-md){
+   display: flex;
+  }
+ }
+
+ &__box{
+  min-width: 30rem;;
+  max-width: 30rem;
+  width: 100%;
+  @include r($r-md){
+   margin-bottom: 5rem;
+  }
+  @include rmin($r-md){
+   margin-right: 5rem;
+  }
+ }
+ &__img{
+  object-fit: cover;
+  width: 100%;
+ }
+
+ &__text{
+  font-size: 2rem;
+  @include mon-medium;
+  max-width: 76.5rem;
+  width: 100%;
+  p:not(:last-child){
+   margin-bottom: 2rem;
+  }
+ }
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Fonte Блог",
+"description":"Fonte Блог"
+})
+
+<body class="dark-mode">
+ <header class="header">
+  <div class="container container--big">
+   <nav class="nav" role="navigation">
+    <button class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-haspopup="true"
+     aria-controls="menu">
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="sr-only">Menu</span>
+    </button>
+
+    <a href="./" class="nav__logo logo">
+     <img src="img/icons/logo.svg" alt="Logo of the website" class="logo__img">
+    </a>
+
+    <div class="nav__popup" id="menu">
+     <ul class="nav__list">
+      <li class="nav__item">
+       <a href="index.html#about" class="nav__link">О нас</a>
+      </li>
+      <li class="nav__item">
+       <a href="index.html#team" class="nav__link">Команда</a>
+      </li>
+      <li class="nav__item">
+       <a href="index.html#blog" class="nav__link">Блог</a>
+      </li>
+      <li class="nav__item">
+       <a href="products.html" class="nav__link">Продукты</a>
+      </li>
+      <li class="nav__item">
+       <a href="contacts.html" class="nav__link">Контакты</a>
+      </li>
+      <li class="nav__item nav__item--custom">
+       <select name="" id="" class="lang">
+        <option class="lang__rus" value="rus">Русский</option>
+        <option class="lang__kz" value="kz">Kазахский</option>
+       </select>
+       <a href="#" class="nav__link nav__link--border btn">Войти</a>
+      </li>
+     </ul>
+
+
+    </div>
+
+
+
+
+   </nav>
+  </div>
+
+ </header>
+
+ <main class="main">
+  @@include('components/page-blocks/_4.intro.html',{
+  'src': "img/blog/intro-3.webp"
+  })
+
+  <section class="section blog-section">
+   <div class="container">
+    <!-- <h1 class="title blog-section title--after">Fonte Блог</h1> -->
+    <ul class="breadcrumbs">
+     <li class="breadcrumbs__item"><a href="blog.html" class="blog-section__breadcrumbs breadcrumbs__link">Блог</a></li>
+     <li class="breadcrumbs__item"><span class="breadcrumbs__link">Минфин предложил единый</span></li>
+    </ul>
+
+    <div class="blog-post blog-post--single">
+
+     <div class="blog-post__content">
+      <strong class="blog-post__cat">Менеджемент</strong>
+      <h3 class="blog-post__title">Минфин предложил единый
+       налоговый вычет для долгосрочных
+       инвестиций с новым типом ИИС</h3>
+      <p class="blog-post__author-date">
+       <span class="blog-post__author">Арман Арманов</span>,<span class="blog-post__date"> Октябрь 13, 2022</span>
+      </p>
+      <div class="blog-post__box">
+       <img src="img/blog/posts/1.webp" alt="Минфин предложил единый налоговый вычет" class="blog-post__img">
+      </div>
+      <p class="blog-post__text">
+       Минфин разработал новый формат индивидуальных инвестиционных счетов (ИИС-III) — его включат в систему единого
+       налогового вычета наряду с пенсионными и страховыми инвестициями. С 2024 года ИИС-III полностью заменит ИИС-I,
+       запущенный в 2015 году. Новый инвестсчет будет неинтересен для инвесторов в предложенной конфигурации, считают в
+       НАУФОР
+      </p>
+      <a href="blog-single.html" class="blog-post__link">Подробнее</a>
+     </div>
+    </div>
+
+    <h2 class="blog-section__subtitle">Интересное по теме</h2>
+
+    <ul class="popular-posts">
+     <li class="blog-post popular-posts__item" data-tab-content="management">
+      <!-- <div class="blog-post__box">
+       <img src="img/blog/posts/2.webp" alt="Рэй Далио перестал считать наличные «мусором»" class="blog-post__img">
+      </div> -->
+      <div class="blog-post__content">
+       <h3 class="blog-post__title">Рэй Далио перестал считать наличные «мусором»</h3>
+       <a href="blog-single.html" class="blog-post__link">Подробнее</a>
+      </div>
+     </li>
+
+     <li class="blog-post popular-posts__item" data-tab-content="management">
+      <!-- <div class="blog-post__box">
+       <img src="img/blog/posts/3.webp" alt="Инвестиции в 5G – необходимое условие экономического развития"
+        class="blog-post__img">
+      </div> -->
+      <div class="blog-post__content">
+       <h3 class="blog-post__title">Инвестиции в 5G – необходимое <br /> условие экономического развития</h3>
+       <a href="blog-single.html" class="blog-post__link">Подробнее</a>
+      </div>
+     </li>
+
+    </ul>
+
+
+   </div>
+  </section>
+
+  <!-- @@include('components/page-blocks/_2.subscribe.html') -->
+  @@include('components/page-blocks/_3.middle-nav.html')
+ </main>
+
+
+
+ @@include('components/page-blocks/_footer.html')
+ @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>

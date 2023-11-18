@@ -1,0 +1,290 @@
+.nav {
+ padding: 0px 5px;
+
+ @include rmin($r-md) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ @include r($r-lg) {
+  padding: 45px 0px 22px;
+ }
+
+ &--dark {
+  .nav {
+   &__popup {
+    background-color: $t_second;
+   }
+
+   &__link {
+    color: $t_main;
+
+    &--border {
+     border: 1px solid $t_main;
+
+     &:hover {
+      border: 1px solid $t_second;
+      background-color: $t_main;
+      color: $t_second;
+     }
+    }
+   }
+  }
+
+  .menu-bar {
+   background-color: $t_main;
+  }
+ }
+
+ &--middle {
+  padding: 0;
+
+  @include r($r-lg) {
+   padding: 0;
+  }
+
+  .nav {
+
+   &__link {
+    font-size: 1.4rem;
+    transition: color 0.3s ease-in;
+    &:hover{ 
+     color: $accent;
+    }
+   }
+
+   &__item {
+    &:not(:last-child) {
+     @include r($r-lg) {
+      margin-bottom: 1.5rem;
+     }
+    }
+   }
+  }
+ }
+
+ &__logo {
+  flex: 1 0 auto;
+ }
+
+ &__popup {
+
+  @include rmin($r-md) {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex: 2 0 auto;
+  }
+
+  @include r($r-lg) {
+   position: absolute;
+   top: 100%;
+   left: 0;
+   width: 100vw;
+  }
+ }
+
+ &__list {
+  @include rmin($r-lg) {
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+  }
+
+  @include r($r-lg) {
+   width: 100%;
+  }
+ }
+
+ &__item {
+  &:not(:last-child) {
+   @include rmin($r-lg) {
+    margin-right: 5rem;
+   }
+
+   @include r($r-lg) {
+    margin-bottom: 3rem;
+   }
+  }
+
+  &:last-child {
+   @include r($r-lg) {
+    margin-top: 5rem;
+   }
+  }
+
+  &--custom{
+   display: flex;
+   flex-direction: column;
+   align-items: start;
+   @include rmin($r-lg){
+    align-items: center;
+    flex-direction: row-reverse;
+   }
+  }
+ }
+
+
+ &__link {
+  color: $t_second;
+  display: inline-block;
+  font-size: 1.4rem;
+  padding: 1rem 0;
+
+  @include rmin($r-lg) {
+   padding: 4rem 0;
+  }
+
+  @include r($r-md) {
+   font-size: 1.25rem;
+  }
+
+  &--border {
+
+   border: 1px solid $t_second;
+
+   padding: 1rem 3.8rem;
+   transition: all 0.3s ease-in-out;
+
+   @include rmin($r-lg) {
+    padding: 1rem 3.8rem;
+   }
+
+
+   &:hover {
+    border: 1px solid $t_main;
+    background-color: $t_second;
+    color: $t_main;
+   }
+  }
+
+
+  &.active {
+   position: relative;
+
+   @include rmin($r-lg) {
+    &::after {
+     content: "";
+     position: absolute;
+     height: 5px;
+     width: 100%;
+     top: 0px;
+     left: 0px;
+     background: $accent;
+    }
+   }
+
+  }
+ }
+}
+
+.js .nav {
+ &__popup {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in;
+
+  @include rmin($r-lg) {
+   display: flex;
+   max-height: max-content;
+  }
+
+  &.open {
+   max-height: calc(100vh - 105px);
+
+   @include r($r-lg) {
+    padding: 40px 50px;
+   }
+
+  }
+ }
+}
+
+
+
+
+
+// Hamburger Menu button to toggle menu display
+.menu-button {
+ // Don't want button to look like a button
+ border: none;
+ padding: 4px 5px;
+ background: transparent;
+ display: none;
+ // place in upper right corner
+ position: absolute;
+ right: 25px;
+ top: 35px;
+ z-index: 10;
+
+ // Don't show menu button on large screens
+
+ @include rmin($r-lg) {
+  display: none;
+ }
+
+ // When open, change button to an X for closing menu 
+ &.open {
+  span:first-child {
+   transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  span:nth-child(2) {
+   display: none;
+  }
+
+  span:nth-child(3) {
+   transform: rotate(-45deg);
+  }
+ }
+}
+
+.js .menu-button {
+ display: block;
+
+ @include rmin($r-lg) {
+  display: none;
+ }
+}
+
+// 'hamburger' bars
+.menu-bar {
+ display: block;
+ width: 35px;
+ height: 4px;
+ background-color: #000;
+ border-radius: 2px;
+ margin: 6px 0;
+ transition: transform 0.2s;
+
+}
+
+
+.lang{
+ cursor:pointer;
+ border:none;
+ border-bottom: 1px solid #000;
+ outline: none;
+ -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+
+  @include r($r-lg){
+   margin-bottom: 3rem;
+  }
+  @include rmin($r-lg){
+   margin-left: 3rem;
+  }
+  &__mob{
+   @include rmin($r-lg){
+    // display: none;
+   }
+  }
+  &__desk{
+   @include r($r-lg){
+    // display: none;
+   }
+  }
+}

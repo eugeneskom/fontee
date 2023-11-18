@@ -1,0 +1,35 @@
+.vacancy {
+ background-color: $accent;
+ color: $t_main;
+
+
+ &__inner {
+  padding-top: 7rem;
+  padding-bottom: 13.5rem;
+  background-image: url('../img/team/vacancy.svg');
+  background-repeat: no-repeat;
+  background-size: auto 11.5rem;
+  background-position: bottom 2.5rem right 3rem;
+  
+  @include rmin($r-md) {
+   padding-bottom: 7rem;
+   background-position: center right 3rem;
+   background-size: auto 21.5rem;
+  }
+ }
+
+ &__heading {
+  margin-bottom: 3rem;
+  &::after{
+   background-image: url('../img/icons/title--after-black.svg');
+  }
+ }
+
+ &__text {
+  font-family: $gogh-regular;
+ }
+
+ &__email {
+  font-family: $gogh-bold;
+ }
+}

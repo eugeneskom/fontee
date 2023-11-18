@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+@@include('components/page-blocks/_head.html',{
+"lang":"ru",
+"title":"Продукты",
+"description":"Продукты"
+})
+
+<body class="dark-mode">
+ <header class="header">
+  <div class="container container--big">
+   <nav class="nav" role="navigation">
+    <button class="menu-button" aria-label="Open navigation menu" aria-expanded="false" aria-haspopup="true"
+     aria-controls="menu">
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="menu-bar" aria-hidden="true"></span>
+     <span class="sr-only">Menu</span>
+    </button>
+
+    <a href="./" class="nav__logo logo">
+     <img src="img/icons/logo.svg" alt="Logo of the website" class="logo__img">
+    </a>
+
+    <div class="nav__popup" id="menu">
+     <ul class="nav__list">
+      <li class="nav__item">
+       <a href="index.html#about" class="nav__link">О нас</a>
+      </li>
+      <li class="nav__item">
+       <a href="index.html#team" class="nav__link">Команда</a>
+      </li>
+      <li class="nav__item">
+       <a href="index.html#blog" class="nav__link">Блог</a>
+      </li>
+      <li class="nav__item">
+       <a href="products.html" class="nav__link">Продукты</a>
+      </li>
+      <li class="nav__item">
+       <a href="contacts.html" class="nav__link active">Контакты</a>
+      </li>
+      <li class="nav__item nav__item--custom">
+       <select name="" id="" class="lang">
+        <option class="lang__rus" value="rus">Русский</option>
+        <option class="lang__kz" value="kz">Kазахский</option>
+       </select>
+       <a href="#" class="nav__link nav__link--border btn">Войти</a>
+      </li>
+     </ul>
+
+
+    </div>
+
+
+
+
+   </nav>
+  </div>
+
+ </header>
+
+ <main class="main">
+  <!-- @@include('components/page-blocks/_4.intro.html',{
+  'src': "img/intro-5.webp"
+  }) -->
+
+  <section class="section contacts">
+   <div class="container">
+    <div class="contacts__inner">
+     <div class="contacts__content">
+
+      <h1 class="title title--after contacts__title">Контакты</h1>
+      <address class="contacts__info">
+       <p class="contacts__bold contacts__phone">
+        Задайте нам любой вопрос
+       </p>
+       <a href="tel:77017762420" class="contacts__tel contacts__reg">+7 701 776 24 20 </a>
+
+       <p class=" contacts__email">
+        <span class="contacts__bold">Электронная почта</span>  <a href="mailto:client@fonte.kz" class="contacts__link">client@fonte.kz</a>
+       </p>
+       <p class="contacts__bold contacts__legal">
+        Юридический адрес
+       </p>
+       <p class="contacts__reg">
+        Алматы: БЦ Esentai Tower, пр. Аль-Фараби 77/7, 050040/A15E3H4
+        Астана: AIFC Property Offices, блок С4.1пр. Мангилик Ел, 55/20,
+       </p>
+
+      </address>
+     </div>
+     <form action="" class="subscribe__form contacts__form">
+      <input class="subscribe__input" type="text" placeholder="Полное Имя">
+       <input class="subscribe__input" type="email" placeholder="Email">
+       <input class="subscribe__input" type="number" placeholder="Телефон">
+      <button class="subscribe__submit btn contacts__submit" type="submit">Отправить</button>
+     </form>
+    </div>
+
+    <div class="contacts__maps">
+     <div class="contacts__map contacts__maps-one">
+      <a href="https://yandex.ru/maps/?um=constructor%3A774dbee2d19e6a0da9a916f9de0316aedc4f4c77fec96a49ce5d769873fdf0a1&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A774dbee2d19e6a0da9a916f9de0316aedc4f4c77fec96a49ce5d769873fdf0a1&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+      <p>Астана</p>
+     </div>
+     <div class=" contacts__map contacts__maps-two">
+      <a href="https://yandex.ru/maps/?um=constructor%3A774dbee2d19e6a0da9a916f9de0316aedc4f4c77fec96a49ce5d769873fdf0a1&amp;source=constructorStatic" target="_blank"><img src="https://api-maps.yandex.ru/services/constructor/1.0/static/?um=constructor%3A774dbee2d19e6a0da9a916f9de0316aedc4f4c77fec96a49ce5d769873fdf0a1&amp;lang=ru_RU" alt="" style="border: 0;" /></a>
+      <p>Алматы</p>
+     </div>
+    </div>
+   </div>
+  </section>
+
+
+  <!-- @@include('components/page-blocks/_2.subscribe.html') -->
+  @@include('components/page-blocks/_3.middle-nav.html')
+ </main>
+
+
+
+ @@include('components/page-blocks/_footer.html')
+ @@include('components/page-blocks/_scripts.html')
+</body>
+
+</html>
